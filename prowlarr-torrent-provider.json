@@ -8,7 +8,7 @@
   "description": "Recherche des torrents anime via les indexeurs configurés dans Prowlarr.",
   "author": "isoura4",
   "icon": "",
-  "lang": "French",
+  "lang": "multi",
   "payloadURI": "https://raw.githubusercontent.com/isoura4/Seanime_Torrent_Prowlarr/main/prowlarr-anime-torrent-provider.ts",
   "website": "https://prowlarr.com",
   "plugin": {
