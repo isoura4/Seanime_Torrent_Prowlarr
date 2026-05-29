@@ -1,15 +1,15 @@
 {
   "id": "prowlarr-torrent-provider",
   "name": "Prowlarr Torrent Provider",
-  "version": "1.0.0",
-  "manifestURI": "",
+  "version": "1.1.0",
+  "manifestURI": "https://raw.githubusercontent.com/isoura4/Seanime_Torrent_Prowlarr/main/prowlarr-torrent-provider.json",
   "language": "typescript",
   "type": "anime-torrent-provider",
   "description": "Recherche des torrents anime via les indexeurs configurés dans Prowlarr.",
   "author": "isoura4",
   "icon": "",
   "lang": "multi",
-  "payloadURI": "",
+  "payloadURI": "https://raw.githubusercontent.com/isoura4/Seanime_Torrent_Prowlarr/main/prowlarr-anime-torrent-provider.ts",
   "website": "https://prowlarr.com",
   "userConfig": {
     "requiresConfig": true,
