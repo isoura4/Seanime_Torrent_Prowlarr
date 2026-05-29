@@ -1,0 +1,44 @@
+{
+  "id": "prowlarr-torrent-provider",
+  "name": "Prowlarr Torrent Provider",
+  "version": "1.0.0",
+  "manifestURI": "",
+  "language": "typescript",
+  "type": "anime-torrent-provider",
+  "description": "Recherche des torrents anime via les indexeurs configurés dans Prowlarr.",
+  "author": "isoura4",
+  "icon": "",
+  "lang": "multi",
+  "payloadURI": "",
+  "website": "https://prowlarr.com",
+  "userConfig": {
+    "requiresConfig": true,
+    "version": 1,
+    "fields": [
+      {
+        "name": "prowlarrBaseUrl",
+        "label": "Prowlarr Base URL",
+        "type": "text",
+        "default": "http://localhost:9696"
+      },
+      {
+        "name": "prowlarrApiKey",
+        "label": "Prowlarr API Key",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "indexerIds",
+        "label": "Indexer IDs (comma-separated, optional)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "resultLimit",
+        "label": "Maximum results",
+        "type": "text",
+        "default": "50"
+      }
+    ]
+  }
+}
