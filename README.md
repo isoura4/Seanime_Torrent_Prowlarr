@@ -5,8 +5,7 @@ Extension Seanime (type `anime-torrent-provider`) qui interroge l'API Prowlarr p
 ## Fichiers
 
 - Manifest: `prowlarr-torrent-provider.json`
-- Payload: `prowlarr-torrent-provider.ts`
-- Types: `anime-torrent-provider.d.ts`
+- Payload (types & implementation): `prowlarr-anime-torrent-provider.ts`
 
 ## Configuration Seanime
 

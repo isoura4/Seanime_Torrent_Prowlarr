@@ -1,4 +1,89 @@
-/// <reference path="./anime-torrent-provider.d.ts" />
+// ============================================================================
+// Type Definitions
+// ============================================================================
+
+type AnimeProviderSmartSearchFilter = 'batch' | 'episodeNumber' | 'resolution' | 'query' | 'bestReleases';
+type AnimeProviderType = 'main' | 'special';
+
+interface AnimeProviderSettings {
+  canSmartSearch: boolean;
+  smartSearchFilters: AnimeProviderSmartSearchFilter[];
+  supportsAdult: boolean;
+  type: AnimeProviderType;
+}
+
+interface FuzzyDate {
+  year: number;
+  month?: number;
+  day?: number;
+}
+
+interface Media {
+  id: number;
+  idMal?: number;
+  status?: string;
+  format?: string;
+  englishTitle?: string;
+  romajiTitle?: string;
+  episodeCount?: number;
+  absoluteSeasonOffset?: number;
+  synonyms: string[];
+  isAdult: boolean;
+  startDate?: FuzzyDate;
+}
+
+interface AnimeSearchOptions {
+  media: Media;
+  query: string;
+}
+
+interface AnimeSmartSearchOptions {
+  media: Media;
+  query: string;
+  batch: boolean;
+  episodeNumber: number;
+  resolution: string;
+  anidbAID: number;
+  anidbEID: number;
+  bestReleases: boolean;
+}
+
+interface AnimeTorrent {
+  name: string;
+  date: string;
+  size: number;
+  formattedSize: string;
+  seeders: number;
+  leechers: number;
+  downloadCount: number;
+  link: string;
+  downloadUrl?: string;
+  magnetLink?: string;
+  infoHash?: string;
+  resolution?: string;
+  isBatch?: boolean;
+  episodeNumber: number;
+  releaseGroup?: string;
+  isBestRelease: boolean;
+  confirmed: boolean;
+}
+
+interface ProwlarrSearchResult {
+  title?: string;
+  size?: number;
+  seeders?: number;
+  leechers?: number;
+  grabs?: number;
+  publishDate?: string;
+  downloadUrl?: string;
+  magnetUrl?: string;
+  infoUrl?: string;
+  guid?: string;
+}
+
+// ============================================================================
+// Provider Implementation
+// ============================================================================
 
 class Provider {
   prowlarrBaseUrl = '{{prowlarrBaseUrl}}';
@@ -158,19 +243,6 @@ class Provider {
 
     return `${value.toFixed(value >= 10 || unitIndex === 0 ? 0 : 1)} ${units[unitIndex]}`;
   }
-}
-
-interface ProwlarrSearchResult {
-  title?: string;
-  size?: number;
-  seeders?: number;
-  leechers?: number;
-  grabs?: number;
-  publishDate?: string;
-  downloadUrl?: string;
-  magnetUrl?: string;
-  infoUrl?: string;
-  guid?: string;
 }
 
 (globalThis as { Provider?: typeof Provider }).Provider = Provider;
