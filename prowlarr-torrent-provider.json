@@ -11,6 +11,10 @@
   "lang": "multi",
   "payloadURI": "https://raw.githubusercontent.com/isoura4/Seanime_Torrent_Prowlarr/main/prowlarr-anime-torrent-provider.ts",
   "website": "https://prowlarr.com",
+  "plugin": {
+    "version": "1",
+    "permissions": {}
+  },
   "userConfig": {
     "requiresConfig": true,
     "version": 1,
